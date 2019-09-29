@@ -1,0 +1,556 @@
+/* Settings - feel free to play with these */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Alef);
+
+/**
+ * This part should be set separately for each video
+ * if there are multiple videos in your site.
+ * I.e. '.demo-video-wrapper' is the name of this particular video
+ */
+/* .demo-video-wrapper {
+  background-image: url(./video/01sec.png);
+} */
+
+/* Video overlay and content */
+.video-overlay {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.video-overlay h2 {
+  letter-spacing: 10px;
+  font-size: calc(2em + 0.2vw);
+  font-weight: 600;
+  text-align: center;
+  margin: 1.2em 1px 1.2em 0px;
+  /* padding-right: .5px; */
+  /* margin-right: 1px; */
+  color: #f9f9f9;
+  z-index: 1;
+}
+.video-overlay ::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  border: 2px solid white;
+}
+@media only screen and (max-width: 600px) {
+  .video-overlay ::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 80px);
+    border: 2px solid white;
+  }
+} 
+
+
+.video-overlay p {
+  font-size: calc(2em + 0.2vw);
+  font-weight: 400;
+  line-height: 2;
+  color: rgb(255, 249, 249);
+  z-index: 1;
+}
+
+/* Other stuff */
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #f9f9f9;
+  background-color: #1b1818
+}
+
+a {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.page-width {
+  width: 92%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#header {
+  background: #2c2d33;
+  padding: 2em 0;
+}
+
+#header a {
+  color: #FFF;
+}
+
+.title {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.subtitle {
+  display: block;
+  font-weight: normal;
+  font-size: 15px;
+  color: #959699;
+}
+
+a:hover .subtitle {
+  color: #f9f9f9;
+}
+
+#site-title {
+  float: left;
+  margin: 0;
+}
+
+#content {
+  padding: 40px 0;
+}
+
+/* CSS from jQuery Background Video plugin */
+/**
+ * Set default positioning as a fallback for if the plugin fails
+ */
+.jquery-background-video-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.jquery-background-video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/**
+ * Fade in videos
+ * Note the .js class - so non js users still
+ * see the video
+ */
+.js .jquery-background-video {
+  opacity: 0;
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+}
+
+.js .jquery-background-video.is-visible {
+  opacity: 1;
+}
+
+/**
+ * Pause/play button
+ */
+.jquery-background-video-pauseplay {
+  position: absolute;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 15px;
+  padding: 0;
+  cursor: pointer;
+  outline: none !important;
+}
+
+.jquery-background-video-pauseplay span {
+  display: none;
+}
+
+.jquery-background-video-pauseplay:after,
+.jquery-background-video-pauseplay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.jquery-background-video-pauseplay.play:before {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #FFF;
+}
+
+.jquery-background-video-pauseplay.pause:before,
+.jquery-background-video-pauseplay.pause:after {
+  border-top: 10px solid #FFF;
+  border-bottom: 10px solid #FFF;
+  border-left: 5px solid #FFF;
+}
+
+.jquery-background-video-pauseplay.pause:after {
+  left: 10px;
+}
+
+html {
+  font: 400 14px/1.3 "Poppins";
+  background: #333;
+}
+
+.grid { 
+  max-width: 992px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.cell {
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  position: relative;
+}
+
+/* 
+  This is the first key to making squares! 
+  The padding value of 100% equates 100% of the parent's width,
+  which means that as long as we position the content of the
+  square absolutely and take it out of flow, it will appear as a
+  perfect square.
+*/
+.cell:after {
+  padding-bottom: 80%;
+  display: block;
+  content: '';
+}
+
+/* 
+  Here's the second key: the content element is where you'll put 
+  your video, your text, or whatever.
+  This needs to stretch to fill the parent, which you can do 
+  either by using height: 100%; width: 100%, or, for more precise 
+  control, use top/left/bottom/right like so:
+*/
+.content {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+  overflow: hidden; /* <-- THIS IS CRUCIAL IF YOU INTEND TO PUT VIDEOS OR IMAGES IN SQUARELY */
+}
+
+.content p {
+  color: #fefefe;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: .5em;
+  right: .5em;
+  margin: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.content a,{
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.content._empty {
+  border: 1px dashed #fff;
+  transition: .3s cubic-bezier(.4,0,.2,1) border-color;
+}
+
+.content._empty:hover {
+  border-color: goldenrod
+}
+
+/* 
+  To make the video appear squarely, first center it with the
+  good ol' top/left/transformX/Y trick, then set 
+  `max-width: 100%; min-height: 100%` if your videos are landscape 
+  aspect-ratio and vice versa for portrait videos. 
+  If your content is going to be unpredictable in aspect-ratio, you 
+  could use JavaScript for this bit, or emit size-specific CSS classes in   
+  your server-side templates if you're not making an SPA.
+*/
+.content > video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 100%;
+  min-height: 100%;
+  /*
+    You can also use object-fit: cover; object-position: center;
+    instead of the position/transform hack, but IE doesn't support this,
+    and pre-iOS10 Safari doesn't support object-position, so:
+  */
+}
+
+h1, h2 {
+  color: #fefefe;
+  text-align: center;
+  padding: 0 1em;
+}
+
+h1 {
+  margin: 3rem auto .5em;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 auto 1.5em;
+}
+
+.img-container {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  /* height: 335px; */
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.middle .text { 
+  color: #f9f9f9;
+  font-size: 16px;
+  white-space: nowrap;
+  border-radius: 5px;
+  padding: 5px;
+  background: #0000009e;
+  cursor: pointer;
+}
+/* .img-container:hover .image {
+  opacity: 0.3;
+} */
+
+.img-container:hover .middle {
+  opacity: 1;
+}
+
+.img-text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+/*GrayScale*/
+.img-container img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.img-container:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.text-right{
+  text-align: right
+}
+.sign {
+  font-style: italic;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.commit-box {
+  color: #9e8157;
+  padding: 0em 1em;
+}
+.commit-user {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+}
+.commit-img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+.commit-name {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.commit-detail {
+  color: gray;
+  box-sizing: border-box;
+  outline: none;
+  word-wrap: break-word;
+}
+
+
+.sc-testimonial-style-4:before {
+  content: "\201C";
+  display: inline-block;
+  width: 68px;
+  height: 68px;
+  padding-top: 16px;
+  border-radius: 50%;
+  border: 1px solid #8f8f8f;
+  font-family: "Playfair Display", serif;
+  font-size: 68px;
+  font-size: 4.25rem;
+  line-height: 68px;
+  color: #9e8157;
+}
+.text-video{
+  background-color: #1b1818;
+}
+
+.footer{
+  height: 60vh;
+  background-color: #2b2727;
+}
+.footer .form {
+  padding: 5em;
+}
+.footer .detail {
+  padding: 5em 2em 0em 0em;
+}
+
+/* hamburger */
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.bar1, .bar3 {
+  width: 40px;
+  height: 3px;
+  background-color: #f9f9f9;
+  margin: 7px 0px;
+  transition: 0.4s;
+}
+
+.bar2 {
+  width: 35px;
+  height: 3px;
+  background-color: #f9f9f9;
+  margin: 7px 0px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 8px);
+  transform: rotate(-45deg) translate(-6px, 8px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* navBar */
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  z-index: 10
+}
+
+#navbar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.pt-48 {
+  padding-top: 48px;
+}
+
+#contact {
+  height: 100%;
+}

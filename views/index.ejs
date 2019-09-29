@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/lity.min.css">
+  <link rel="stylesheet" href="/stylesheets/photoswipe/photoswipe.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <div id="navbar" class="header container-fluid">
+    <div class="row " style="height: 48px;">
+      <div class="col px-0 text-center">
+        <a href="#videoHero">HOME</a>
+      </div>
+      <div class="col px-0 text-center">
+        <a href="#videos">VIDEOs</a>
+      </div>
+      <div class="col px-0 text-center">
+        <a href="#about">ABOUT</a>
+      </div>
+      <div class="col px-0 text-center">
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+  </div>
+<!-- Start video hero -->
+  <div id="videoHero" class="video-hero jquery-background-video-wrapper">
+    <div class="video-overlay">
+        <h2>LIGHT FREEZE</h2>
+    </div>
+    <video class="jquery-background-video" autoplay muted loop controls playsinline poster="/images/01sec.png">
+      <source src="/video/test01.mp4" type="video/mp4">
+    </video>
+  </div>
+<!-- End video hero -->
+  <div id="main" class="container-fluid">
+    <div id="videos" class="row pt-5">
+      <% posts.forEach(function(post) { %>
+        <div class="col-12 col-sm-4">
+          <div class="img-container">
+            <img src="<%= post.imgUrl %>" alt="<%= post.title %>" class="image" style="width:100%">
+            <div class="middle">
+              <a class="btn text" href="//www.youtube.com/watch?v=<%= post.youtubeId %>" data-lity><%= post.title %></a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <div id="about" class="row pt-5 text-video">
+      <div class="col-12 col-lg-6 text-right pt-2">
+        <p>關於我</p>
+        <p>藝術家的身份</p>
+        <p>常常使我困擾，畢竟我要包辦全部事項</p>
+        <p>業界找不到像我這種性價比如此高的了</p>
+        <p>獨特的眼光,無限的創意,穩定的攝影</p>
+        <p>造就我完美的作品</p>
+        <h4 class="sign">博鈞・施</h4>
+      </div>
+      <div class="col-12 col-lg-6"> <img src="/images/demo01.png" alt="Avatar" class="image rounded" style="width:100%"></div>
+    </div>
+    <div class="row py-5 text-video">
+      <div class="col-12 col-lg-6"> <img src="/images/demo02.png" alt="Avatar" class="image rounded" style="width:100%"></div>
+      <div class="col-12 col-lg-6 text-left pt-2">
+          <p>傾城之練</p>
+          <p>這是我最得意的作品</p>
+          <p>描述著一大堆的字跟一大堆的字</p>
+          <p>由車公不心新製總你裡女通日以</p>
+          <p>兩黨面日是醫的喜部麼清者專次為有市，足年世孩兒善了；入生加樹心中爾學能我、能中很該引傳有。活唱父福題一、斯戰心建個綠影於代頭利列各前學師上北反場就水消斷？了但製卻車至的、來動只各向</p>
+          <h4 class="sign">博鈞・施</h4>
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col text-center text-monospace">
+        <span class="sc-testimonial-style-4"></span>
+      </div>
+      <div class="w-100 pb-4"></div>
+      <div class="col text-center pb-5">
+        <div class="commit-box">
+          <p>“沒教系血！廣感業中期它二水同文農病應重考應我學業何資失面意如子請不外傷的元，主毒中談臺，省孩見、年合汽代地因不讀流我然傷該不期爸在是是識顧唱的不難多人。的民中，部營其長風一大家利，治了變同兒史們是輕刻的功在新科兒天代許失放廣男高了華手接費色的考說物前修現一是麼長；口日例不目邊國西然民由地有據家許四。”</p>
+        </div>
+        <div class="commit-user">
+            <div class="commit-img">
+              <img src="/images/fmale.png" alt="" class="commit-img">
+            </div>
+            <div>
+              <div class="commit-name">
+                  Richard Green
+              </div>
+              <div class="commit-detail">
+                  Marketing Manager of Donal Skehan
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col text-center pb-5">
+        <div class="commit-box">
+          <p>“沒教系血！廣感業中期它二水同文農病應重考應我學業何資失面意如子請不外傷的元，主毒中談臺，省孩見、年合汽代地因不讀流我然傷該不期爸在是是識顧唱的不難多人。的民中，部營其長風一大家利，治了變同兒史們是輕刻的功在新科兒天代許失放廣男高了華手接費色的考說物前修現一是麼長；口日例不目邊國西然民由地有據家許四。”</p>
+        </div>
+        <div class="commit-user">
+          <div class="commit-img">
+            <img src="/images/male.png" alt="" class="commit-img">
+          </div>
+          <div>
+            <div class="commit-name">
+                Richard Green
+            </div>
+            <div class="commit-detail">
+                Marketing Manager of Donal Skehan
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="row pt-5 footer">
+      <div class="col-12 text-center"><h4>Contact Me</h4></div>
+      <div class="col-12 col-lg-7">
+        <form class="form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">需求</label>
+            <textarea class="form-control" maxlength="250" rows="4" cols="50" placeholder="寫下你的需求..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary float-right">聯絡我！</button>
+        </form>
+      </div>
+      <div class="col-12 col-lg-5">
+        <div class="detail">
+          <p>line: 123123213</p>
+          <p>email: 123123213@com.tw</p>
+          <p>phone: 0912345612</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="inline" style="background:#fff" class="lity-hide">
+    Inline content
+  </div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/lity.min.js"></script>
+<script src="/javascripts/photoswipe/photoswipe.min.js"></script>
+<script src="/javascripts/main.js"></script>
+<script>
+ 
+  $(function(){
+    window.onscroll = function() {stickyNavBar()};
+    var navbar = document.getElementById("navbar");
+    var videoHero = document.getElementById("videoHero");
+    var main = document.getElementById("main");
+    var sticky = videoHero.offsetHeight;
+    function stickyNavBar() {
+      if (window.pageYOffset >= sticky) {
+        main.classList.add('pt-48')
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+        main.classList.remove('pt-48')
+      }
+    }
+    $('a[href^="#"]').on('click', function(e) {
+      if ( this.hash !== '' ) {
+          e.preventDefault();
+          var hash = this.hash;
+          var nav = $( '.navbar' ).outerHeight();
+          $( 'html, body' ).animate( {
+              scrollTop: $( hash ).offset().top - 40
+          }, 800);
+        }
+    });
+  });
+</script>
+</body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v4.0'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="135003290517372"
+theme_color="#44bec7"
+logged_in_greeting="BJ-02，只有最酷沒有更酷，想要跳脫小清新，這裡給你大吸睛！ 想好就聯絡我！ 香港8845678！ 12點後別打給我，因為我睡了～"
+logged_out_greeting="BJ-02，只有最酷沒有更酷，想要跳脫小清新，這裡給你大吸睛！ 想好就聯絡我！ 香港8845678！ 12點後別打給我，因為我睡了～">
+</div>
+</html>
