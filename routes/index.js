@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const videoController = require('../controllers/videoController.js')
-const imageController = require('../controllers/imageController.js')
+const videoController = require('../controllers/videoController')
+const imageController = require('../controllers/imageController')
 /* GET home page. */
 router.get('/', async (req, res) => {
   let posts = [
